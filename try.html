@@ -73,7 +73,7 @@
         }
         
         .flip-card {
-            perspective: 1000px; /* Add the perspective property */
+            perspective: 1000px; 
         }
 
         .flip-card-inner {
@@ -99,17 +99,62 @@
         .flip-card-back {
             transform: rotateY(180deg);
         }
+        .wavy-text {
+            display: inline-block;
+            font-size: 3rem;
+        }
+
+        .wavy-text span {
+            display: inline-block;
+            animation: wave 1s infinite ease-in-out;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes soft-pulse {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-5px);
+                opacity: 0.8;
+            }
+        }
+
+        .animate-soft-pulse {
+            animation: soft-pulse 2s ease-in-out infinite;
+        }
 
 
         /* body { 
-            background-image: url("https://th.bing.com/th/id/OIP.pQz4cxMurArs78uO1wYqXwHaEJ?rs=1&pid=ImgDetMain"); 
+            background-image: url("https://cdn.pixabay.com/video/2023/10/22/186059-876954022_tiny.mp4"); 
             background-repeat: no-repeat; 
             background-size: cover; 
             height: 100%; width: 100%; 
         } */
-        /* #card3:hover p{
-            transform: translate(-20px,-20px) scale(1) rotate(0deg);
-        } */
+        
+        #contactcard1:hover img{
+            transform: translate(-20px,-20px);
+            transform: scale(1.25);
+        } 
+
+        #contactcard2:hover img{
+            transform: translate(-20px,-20px);
+            transform: scale(1.25);
+        } 
+
+        #contactcard3:hover img{
+            transform: translate(-20px,-20px);
+            transform: scale(1.25);
+        } 
         
     </style>
 </head>
@@ -165,132 +210,177 @@
         </div>
     </section>
 
-    <section id="section2" class="h-[90vh] flex flex-col justify-center items-center section relative pt-4 " style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
+    <section id="section2" class="h-[100vh] flex flex-col justify-center items-center section relative pt-4 " style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
         <div class="mb-5">
-            <h1 class="text-5xl">Explore our Packages</h1>
+            <h1 class="text-5xl wavy-text text-white">
+                <span style="--i:1">C</span>
+                <span style="--i:2">h</span>
+                <span style="--i:3">o</span>
+                <span style="--i:4">o</span>
+                <span style="--i:5">s</span>
+                <span style="--i:6">e</span>
+                <span style="--i:6"></span>
+                <span style="--i:7">a</span>
+                <span style="--i:7"></span>
+                <span style="--i:8">t</span>
+                <span style="--i:9">r</span>
+                <span style="--i:10">a</span>
+                <span style="--i:11">v</span>
+                <span style="--i:12">e</span>
+                <span style="--i:13">l</span>
+                <span style="--i:13"></span>
+                <span style="--i:14">p</span>
+                <span style="--i:15">a</span>
+                <span style="--i:16">r</span>
+                <span style="--i:17">t</span>
+                <span style="--i:18">n</span>
+                <span style="--i:19">e</span>
+                <span style="--i:20">r</span>
+            </h1>
+            
+            <h1 class="justify-center text-2xl text-center text-white mt-2">It's not about where you go, it's about who you go with</h1>
+            <h1 class="justify-center text-2xl text-center text-white mt-2">We have a lot of cuties to choose from!</h1>
+
+
         </div>
-        <div class="h-[70vh] grid grid-cols-3 gap-x-20 gap-y-10 p-4 mt-2">
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image1.jpg" alt="Image 1" class="w-full">
+        <div class="h-[70vh] grid grid-cols-4 gap-x-16 mx-4 gap-y-10 p-4 mt-2">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/vineet.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white ">
+                    <div class="h-1/3 animate-bounce">
+                        Vinit 
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image2.jpg" alt="Image 2" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/roshni.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Roshni 
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image3.jpg" alt="Image 3" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/dhruv.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Dhruv
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image4.jpg" alt="Image 4" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/soubhagya.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
-                    </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Soubhagya
+                    </div> 
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image5.jpg" alt="Image 5" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/sumona.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Sumona
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image6.jpg" alt="Image 6" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/aniket.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Aniket 
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image7.jpg" alt="Image 7" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/mragank.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Mragank
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image8.jpg" alt="Image 8" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/anuj.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Anuj
                     </div>
-                    <div class="h-2/3">
-                        Package
-                    </div>
+                    
                 </div>
             </div>
-            <div class="w-full card border rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
-                <div class="w-2/5">
-                    <img src="image9.jpg" alt="Image 9" class="w-full">
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/diksha.png'); height: 100%;">
                 </div>
-                <div class="w-3/5 p-4 bg-gray-100 text-center">
-                    <div class="h-1/3">
-                        Name of place
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Diksha
                     </div>
-                    <div class="h-2/3">
-                        Package
+                    
+                </div>
+            </div>
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/harshit.png'); height: 100%;">
+                </div>
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Harshit
                     </div>
+                    
+                </div>
+            </div>
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/deepali.png'); height: 100%;">
+                </div>
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Deepali
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="w-full card border border-black rounded-lg shadow-lg overflow-hidden h-[20vh] w-[40vh] flex">
+                <div class="w-2/5 bg-cover bg-center" style="background-image: url('cc/vivek.png'); height: 100%;">
+                </div>
+                
+                <div class="w-3/5 p-4 bg-gray-100 text-center justify-center items-center text-center text-2xl text-bold flex backdrop-blur-sm bg-opacity-10 text-white">
+                    <div class="h-1/3 animate-bounce">
+                        Vivek
+                    </div>
+                    
                 </div>
             </div>
         </div>
     
     </section>
 
+ 
     <section id="section3" class="h-[80vh] w-full flex justify-center items-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
         <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
             <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
@@ -300,15 +390,15 @@
                     </video>
                 </div>
             </div>
-            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-zinc-500 shadow-lg hover:shadow-none">
-                <h1 class="absolute text-xl text-bold flex justify-center items-center">Mountains</h1><br>
+            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-indigo-950 shadow-lg hover:shadow-none">
+                <h1 class="font-bold text-white text-3xl">MOUNTAINS</h1>
                 <div class="flex justify-between items-center h-full space-x-4">
-                    <div id="card1" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">
+                    <div id="card1" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200 rounded-md">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
                             </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
                                     style="border:0; width: 100%; height: 100%;" 
@@ -320,241 +410,396 @@
                             </div>
                         </div>
                     </div>
-                    <div id="card2" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
+                    <div id="card2" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
                             </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
                             </div>
                         </div>
                     </div>
-                    <div id="card3" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
+                    <div id="card3" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
                             </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section4" class="h-[80vh] w-full flex justify-center items-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
+        <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
+
+            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-indigo-950 shadow-lg hover:shadow-none">
+                <h1 class="font-bold text-white text-3xl">BEACHES</h1>
+                <div class="flex justify-between items-center h-full space-x-4">
+                    <div id="card1" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200 rounded-md">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
                             </div>
                         </div>
                     </div>
+                    <div id="card2" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card3" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
+                <div class="w-80 h-80 round-container">
+                    <video autoplay muted loop>
+                        <source src="beaches.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section5" class="h-[80vh] w-full flex justify-center items-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
+        <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
+            <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
+                <div class="w-80 h-80 round-container">
+                    <video autoplay muted loop>
+                        <source src="monuments.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-indigo-950 shadow-lg hover:shadow-none">
+                <h1 class="font-bold text-white text-3xl">MONUMENTS</h1>
+                <div class="flex justify-between items-center h-full space-x-4">
+                    <div id="card1" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card2" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card3" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section6" class="h-[80vh] w-full flex justify-center items-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
+        <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
+
+            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-indigo-950 shadow-lg hover:shadow-none">
+                <h1 class="font-bold text-white text-3xl">WATERFALLS</h1>
+                <div class="flex justify-between items-center h-full space-x-4">
+                    <div id="card1" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card2" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card3" class="flip-card h-3/4 w-3/4 border-1 rounded-lg p-2 m-2 shadow-lg shadow-black hover:shadow-none">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-200">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                            </div>
+                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200 rounded-md">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12392.493268545453!2d76.9678545!3d30.89959095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f88e0ddfe0b27%3A0x2cf1b6ec9befd181!2sKasauli%2C%20Himachal%20Pradesh!5e1!3m2!1sen!2sin!4v1734192386153!5m2!1sen!2sin" 
+                                    style="border:0; width: 100%; height: 100%;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade" 
+                                    class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
+                <div class="w-80 h-80 round-container">
+                    <video autoplay muted loop>
+                        <source src="waterfalls.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </section>
     
+    <section id="last" class="p-2 m-2 flex justify-between items-center">
+        <div class="w-full h-[60vh] flex flex-col justify-center text-center bg-purple-200">
+            <div class="h-[60vh]">
+                <h1 class="text-4xl text-purple-800 font-bold p-4"><u>ENQUIRE</u></h1>
+                <div class="flex flex-wrap items-center space-x-4 p-4">
+                    <div class="flex-1 min-w-[200px]">
     
-    <section id="section4" class="h-[80vh] w-full flex justify-center items-center " style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: cover; background-position: center;">
-        <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
-            <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
-                <div class="w-80 h-80 round-container">
-                    <video autoplay muted loop>
-                        <source src="mountains.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-zinc-500 shadow-lg hover:shadow-none">
-                <h1 class="absolute text-xl text-bold flex justify-center items-center">Mountains</h1><br>
-                <div class="flex justify-between items-center h-full space-x-4">
-                    <div id="card1" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                        <label class="block text-gray-700">From</label>
+                        <input class="w-full border border-gray-300 rounded-md px-4 py-2" type="text" value="New Delhi, India (DEL)"/>
+                    </div>
+                    <div class="flex-1 min-w-[200px]">
+    
+                        <label class="block text-gray-700">To</label>
+                        <input class="w-full border border-gray-300 rounded-md px-4 py-2" placeholder="To" type="text"/>
+                    </div>
+                    <div class="flex-1 min-w-[200px]">
+    
+                        <label class="block text-gray-700">Depart</label>
+                        <div class="relative">
+                            <input class="w-full border border-gray-300 rounded-md px-4 py-2" type="text" value="Sun, 15 Dec 2024"/>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-calendar-alt text-gray-400"></i>
                             </div>
                         </div>
                     </div>
-                    <div id="card2" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card3" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
+                    <div class="flex-1 w-full">
+    
+                        <label class="block text-gray-700">Return</label>
+                        <div class="relative">
+                            <input class="w-full border border-gray-300 rounded-md px-2 py-2" placeholder="Return" type="text"/>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-calendar-alt text-gray-400"></i>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="section5" class="h-[80vh] w-full flex justify-center items-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: cover; background-position: center;">
-        <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
-            <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
-                <div class="w-80 h-80 round-container">
-                    <video autoplay muted loop>
-                        <source src="mountains.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-zinc-500 shadow-lg hover:shadow-none">
-                <h1 class="absolute text-xl text-bold flex justify-center items-center">Mountains</h1><br>
-                <div class="flex justify-between items-center h-full space-x-4">
-                    <div id="card1" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card2" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card3" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="section6" class="h-[80vh] w-full flex justify-center items-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: cover; background-position: center;">
-        <div class="w-full h-[70vh] p-4 m-4 border-1 border-gray-200 rounded-md flex justify-center text-center bg-indigo-900/30 backdrop-blur-md">
-            <div class="w-2/5 flex justify-center items-center p-6 m-4 rounded-md">
-                <div class="w-80 h-80 round-container">
-                    <video autoplay muted loop>
-                        <source src="mountains.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="w-[130vh] border-1 border-gray-300 h-90 p-4 m-3 rounded-xl backdrop-blur-md shadow-zinc-500 shadow-lg hover:shadow-none">
-                <h1 class="absolute text-xl text-bold flex justify-center items-center">Mountains</h1><br>
-                <div class="flex justify-between items-center h-full space-x-4">
-                    <div id="card1" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card2" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card3" class="flip-card h-3/4 w-1/4 border-2 rounded-lg p-2 m-2 shadow-lg shadow-gray-600 hover:shadow-none">                    
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front flex flex-col justify-center items-center bg-purple-100">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                            <div class="flip-card-back flex flex-col justify-center items-center bg-purple-200">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facilis quas eaque provident consequatur molestias.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="last" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/663/048/original/creative-background-design-template-free-vector.jpg'); background-size: contain; background-position: center;">
-    <div class="w-full h-[40vh] p-4  border-1 border-gray-200 rounded-md flex flex-col justify-center text-center bg-indigo-900/30 ">
-        <div class="flex justify-center space-x-4 py-4">
-            <h1 class="text-4xl">ENQUIRE</h1>
-        </div>
-        <div class="px-4 py-4 m-2">
-            <div class="flex flex-wrap items-center space-x-4">
-                <div class="flex-1 min-w-[200px]">
-
-                    <label class="block text-gray-700">From</label>
-                    <input class="w-full border border-gray-300 rounded-md px-4 py-2" type="text" value="New Delhi, India (DEL)"/>
-                </div>
-                <div class="flex-1 min-w-[200px]">
-
-                    <label class="block text-gray-700">To</label>
-                    <input class="w-full border border-gray-300 rounded-md px-4 py-2" placeholder="To" type="text"/>
-                </div>
-                <div class="flex-1 min-w-[200px]">
-
-                    <label class="block text-gray-700">Depart</label>
-                    <div class="relative">
-                        <input class="w-full border border-gray-300 rounded-md px-4 py-2" type="text" value="Sun, 15 Dec 2024"/>
-                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                            <i class="fas fa-calendar-alt text-gray-400"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-1 min-w-[200px]">
-
-                    <label class="block text-gray-700">Return</label>
-                    <div class="relative">
-                        <input class="w-full border border-gray-300 rounded-md px-4 py-2" placeholder="Return" type="text"/>
-                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                            <i class="fas fa-calendar-alt text-gray-400"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex items-center mt-4">
-                    <input class="mr-2" id="direct-flight" type="checkbox"/>
-                    <label class="text-gray-700" for="direct-flight">Direct flight only</label>
-                </div>
-                <div class="flex-1 min-w-[200px]">
-
-                    <label class="block text-gray-700">Passengers</label>
-                    <select class="w-full border border-gray-300 rounded-md px-4 py-2">
-                        <option>1 Adult</option>
-                    </select>
-                </div>
-                <div class="flex w-full items-center space-x-2 mt-8">
-                    <div class="flex-1 min-w-[200px] flex items-center space-x-2">
-                        <label class="block text-gray-700">Class</label>
-                        <select class="w-full border border-gray-300 rounded-md px-4 py-2">
-                            <option>Economy</option>
+                    <br>
+                    <!-- <div class="items-center mt-4">
+                        <input class="mr-2" id="direct-flight" type="checkbox"/>
+                        <label class="text-gray-700" for="direct-flight">Direct flight only</label>
+                    </div> -->
+                    <br>
+                    <div class="flex-1 min-w-[200px]">
+    
+                        <label class="text-gray-700">Passengers</label>
+                        <select class="w-full border border-gray-300 rounded-md p-4 m-2">
+                            <option>1 Adult</option>
                         </select>
                     </div>
-                    <div class="flex-1 flex items-center space-x-2">
-                        <label class="block text-gray-700">Payment Types</label>
-                        <select class="w-full border border-gray-300 rounded-md px-4 py-2">
-                            <option>5 Payment Types</option>
-                        </select>
+                    <div class="flex w-full items-center space-x-1 bg-purple-200 p-4 m-2" >
+                        <div class="flex-1 min-w-[200px] flex items-center space-x-2">
+                            <label class="block text-gray-700">Travel-with </label>
+                            <select class="w-full border border-gray-300 rounded-md px-4 py-2">
+                                <option>Vinit</option>
+                                <option>Roshni</option>
+                                <option>Soubhagya</option>
+                                <option>Dhruv</option>
+                                <option>Mragank</option>
+                                <option>Aniket</option>
+                                <option>Sumona</option>
+                                <option>Anuj</option>
+                                <option>Harshit</option>
+                                <option>Diksha</option>
+                                <option>Deepali</option>
+                                <option>Vivek</option>
+                            </select>
+                        </div>
+                        <div class="flex-1 flex items-center space-x-2 bg-purple-200 p-4 m-2">
+                            <label class="block text-gray-700">Payment Types</label>
+                            <select class="w-full border border-gray-300 rounded-md px-4 py-2">
+                                <option>credit-card</option>
+                                <option>UPI</option>
+                                <option>Paypal</option>
+                                <option>debit-card</option>
+                                <option>Net-banking</option>
+                            </select>
+                        </div>
+                        <button class="bg-green-500 text-white rounded-md px-4 py-2">Search</button>
                     </div>
-                    <button class="bg-green-500 text-white rounded-md px-4 py-2">Search</button>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </section>
-   
+        </section>
+        <div class=" flex justify-center items-center absolute top-0 left-0 w-full h-full bg-v"></div>
+        <div class="w-[90%] max-w-5xl bg-gradient-to-r from-blue-900 to-purple-900 text-white rounded-lg shadow-lg py-6 px-8">
+            <div class="flex flex-col items-center md:items-start md:flex-row justify-between">
+              
+              <h2 class="text-3xl font-bold mb-6 md:mb-0">
+                Join the <span class="text-purple-400">StudiUS</span> Community Today!
+              </h2>
+        
+              <div class="flex flex-wrap gap-4 text-sm">
+                <button class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-3 rounded-lg transition">
+                  packages
+                </button>
+                <button class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-3 rounded-lg transition">
+                  🗓 Destation Information
+                </button>
+                <button class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-3 rounded-lg transition">
+                   Practice Tests
+                </button>
+                <button class="bg-white text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-100 transition">
+                  + More
+                </button>
+              </div>
+        
+            </div>
+        
+            <div class="flex justify-end items-center gap-4 mt-6 text-sm">
+              <button class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded-lg transition">
+                Join Us Now!
+              </button>
+              <button class="bg-white text-blue-700 py-2 px-4 rounded-lg hover:bg-blue-100 transition">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        <div class="h-[60vh] bg-gray-100">
+            <div class="flex items-center justify-center w-full" style="background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20220215/pngtree-dreamy-blue-purple-watercolor-aesthetic-background-image_924911.jpg);">
+                <div class="contact1 border-purple-400 bg-purple-900/30 backdrop-blur-md rounded-lg w-1/4 h-3/4 p-6 m-4 mt-24 shadow-gray-600 shadow-md hover:shadow-none">
+                    <div id="contactcard1" class="flex justify-center items-center">
+                        <img class="rounded-full h-24 w-24" src="https://marketplace.canva.com/EAF75sVF3q8/1/0/900w/canva-pink-cute-ribbon-quote-phone-wallpaper-AnXsf2cfOpI.jpg" alt="img">
+                    </div>
+                    <div class="h-3/4 font-sans text-black p-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos inventore blanditiis, natus laudantium neque illo harum ut amet dolorum quod?</p>
+                    </div>
+                </div>
+                <div class="contact1 border-purple-400 bg-purple-900/30 backdrop-blur-md rounded-lg w-1/4 h-3/4 p-6 m-4 mt-8 shadow-gray-600 shadow-md hover:shadow-none">
+                    <div id="contactcard2" class="flex justify-center items-center">
+                        <img class="rounded-full h-24 w-24" src="whatsapp.jpg" alt="img">
+                    </div>
+                    <div class="h-3/4 font-sans text-black p-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos inventore blanditiis, natus laudantium neque illo harum ut amet dolorum quod?</p>
+                    </div>
+                </div>
+                <div class="contact1 border-purple-400 bg-purple-900/30 backdrop-blur-md rounded-lg w-1/4 h-3/4 p-6 m-4 mt-24 shadow-gray-600 shadow-md hover:shadow-none">
+                    <div id="contactcard3" class="flex justify-center items-center">
+                        <img class="rounded-full h-24 w-24" src="https://marketplace.canva.com/EAF75sVF3q8/1/0/900w/canva-pink-cute-ribbon-quote-phone-wallpaper-AnXsf2cfOpI.jpg" alt="img">
+                    </div>
+                    <div class="h-3/4 font-sans text-black p-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos inventore blanditiis, natus laudantium neque illo harum ut amet dolorum quod?</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    
+       
 </body>
 </html>
